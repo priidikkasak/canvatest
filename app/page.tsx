@@ -425,7 +425,7 @@ const variants = {
         </nav>
 
         {/* Center content */}
-        <div className="flex items-center justify-center min-h-screen pt-16 md:pt-0">
+        <div className="flex items-center justify-center min-h-screen">
           <div className="text-center px-6 md:px-4 max-w-6xl">
             {/* Main title with glow effect */}
             <h1 className="text-[clamp(2.5rem,12vw,12rem)] md:text-[clamp(3rem,15vw,12rem)] font-black italic tracking-tighter leading-none mb-4 md:mb-6"
@@ -437,7 +437,8 @@ const variants = {
                   textShadow: '0 0 80px rgba(160, 255, 200, 0.5), 0 0 40px rgba(160, 255, 200, 0.3)',
                   filter: 'drop-shadow(0 0 30px rgba(160, 255, 200, 0.4))'
                 }}>
-              WEB DEVELOPER
+              <span className="inline-block tracking-[0.3em] md:tracking-tighter">WEB</span>{' '}
+              <span className="inline-block">DEVELOPER</span>
             </h1>
 
             {/* Subtitle */}
