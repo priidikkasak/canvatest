@@ -1,4 +1,10 @@
+'use client';
+
+import { useState } from 'react';
+
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#0a0e27]">
       {/* Background overlay with gradient */}
@@ -321,9 +327,70 @@ const variants = {
 
       {/* Main content */}
       <div className="relative z-30">
-        {/* Navigation Menu */}
-        <nav className="absolute top-6 md:top-12 left-1/2 transform -translate-x-1/2 flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-12 px-4 max-w-full">
-          <a href="#about" className="text-white text-xs sm:text-sm md:text-lg font-black tracking-[0.2em] md:tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+        {/* Hamburger Menu Button - Mobile Only */}
+        <button
+          className="md:hidden absolute top-6 right-6 z-50 w-10 h-10 flex flex-col justify-center items-center gap-1.5"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className={`w-7 h-0.5 bg-white transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+          <span className={`w-7 h-0.5 bg-white transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
+          <span className={`w-7 h-0.5 bg-white transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+        </button>
+
+        {/* Mobile Menu Overlay */}
+        <div className={`md:hidden fixed inset-0 bg-[#0a0e27] bg-opacity-95 backdrop-blur-lg z-40 transition-all duration-300 ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+          <nav className="flex flex-col items-center justify-center h-full gap-8">
+            <a
+              href="#about"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-white text-2xl font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+              style={{
+                fontFamily: "'Impact', 'Arial Black', sans-serif",
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
+              }}>
+              ABOUT
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a
+              href="#services"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-white text-2xl font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+              style={{
+                fontFamily: "'Impact', 'Arial Black', sans-serif",
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
+              }}>
+              SERVICES
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a
+              href="#portfolio"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-white text-2xl font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+              style={{
+                fontFamily: "'Impact', 'Arial Black', sans-serif",
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
+              }}>
+              PORTFOLIO
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a
+              href="#contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-white text-2xl font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+              style={{
+                fontFamily: "'Impact', 'Arial Black', sans-serif",
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
+              }}>
+              CONTACT
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+          </nav>
+        </div>
+
+        {/* Desktop Navigation Menu */}
+        <nav className="hidden md:flex absolute top-12 left-1/2 transform -translate-x-1/2 gap-12">
+          <a href="#about" className="text-white text-lg font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
              style={{
                fontFamily: "'Impact', 'Arial Black', sans-serif",
                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
@@ -331,7 +398,7 @@ const variants = {
             ABOUT
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#services" className="text-white text-xs sm:text-sm md:text-lg font-black tracking-[0.2em] md:tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+          <a href="#services" className="text-white text-lg font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
              style={{
                fontFamily: "'Impact', 'Arial Black', sans-serif",
                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
@@ -339,7 +406,7 @@ const variants = {
             SERVICES
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#portfolio" className="text-white text-xs sm:text-sm md:text-lg font-black tracking-[0.2em] md:tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+          <a href="#portfolio" className="text-white text-lg font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
              style={{
                fontFamily: "'Impact', 'Arial Black', sans-serif",
                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
@@ -347,7 +414,7 @@ const variants = {
             PORTFOLIO
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#contact" className="text-white text-xs sm:text-sm md:text-lg font-black tracking-[0.2em] md:tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+          <a href="#contact" className="text-white text-lg font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
              style={{
                fontFamily: "'Impact', 'Arial Black', sans-serif",
                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
@@ -358,10 +425,10 @@ const variants = {
         </nav>
 
         {/* Center content */}
-        <div className="flex items-center justify-center min-h-screen">
-          <div className="text-center px-4">
+        <div className="flex items-center justify-center min-h-screen pt-16 md:pt-0">
+          <div className="text-center px-6 md:px-4 max-w-6xl">
             {/* Main title with glow effect */}
-            <h1 className="text-[clamp(3rem,15vw,12rem)] font-black italic tracking-tighter leading-none mb-6"
+            <h1 className="text-[clamp(2.5rem,12vw,12rem)] md:text-[clamp(3rem,15vw,12rem)] font-black italic tracking-tighter leading-none mb-4 md:mb-6"
                 style={{
                   background: 'linear-gradient(to bottom, #ffffff 30%, #a0f0d0 70%, #60d0a0 100%)',
                   WebkitBackgroundClip: 'text',
@@ -374,7 +441,7 @@ const variants = {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-white text-[clamp(1rem,3vw,2rem)] font-bold italic tracking-wider">
+            <p className="text-white text-[clamp(0.875rem,2.5vw,2rem)] md:text-[clamp(1rem,3vw,2rem)] font-bold italic tracking-wider">
               BUILDING THE DIGITAL WORLD
             </p>
           </div>
