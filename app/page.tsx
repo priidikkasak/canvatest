@@ -322,8 +322,8 @@ const variants = {
       {/* Main content */}
       <div className="relative z-30">
         {/* Navigation Menu */}
-        <nav className="absolute top-12 left-1/2 transform -translate-x-1/2 flex gap-12">
-          <a href="#about" className="text-white text-lg font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+        <nav className="absolute top-6 md:top-12 left-1/2 transform -translate-x-1/2 flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-12 px-4 max-w-full">
+          <a href="#about" className="text-white text-xs sm:text-sm md:text-lg font-black tracking-[0.2em] md:tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
              style={{
                fontFamily: "'Impact', 'Arial Black', sans-serif",
                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
@@ -331,7 +331,7 @@ const variants = {
             ABOUT
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#services" className="text-white text-lg font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+          <a href="#services" className="text-white text-xs sm:text-sm md:text-lg font-black tracking-[0.2em] md:tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
              style={{
                fontFamily: "'Impact', 'Arial Black', sans-serif",
                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
@@ -339,7 +339,7 @@ const variants = {
             SERVICES
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#portfolio" className="text-white text-lg font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+          <a href="#portfolio" className="text-white text-xs sm:text-sm md:text-lg font-black tracking-[0.2em] md:tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
              style={{
                fontFamily: "'Impact', 'Arial Black', sans-serif",
                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
@@ -347,7 +347,7 @@ const variants = {
             PORTFOLIO
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#contact" className="text-white text-lg font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+          <a href="#contact" className="text-white text-xs sm:text-sm md:text-lg font-black tracking-[0.2em] md:tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
              style={{
                fontFamily: "'Impact', 'Arial Black', sans-serif",
                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
