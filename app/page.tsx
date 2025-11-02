@@ -459,7 +459,7 @@ const variants = {
                   textShadow: '0 0 80px rgba(160, 255, 200, 0.5), 0 0 40px rgba(160, 255, 200, 0.3)',
                   filter: 'drop-shadow(0 0 30px rgba(160, 255, 200, 0.4))'
                 }}>
-              <span className="inline-block tracking-[0.3em] md:tracking-tighter">WEB</span>{' '}
+              <span className="inline-block tracking-[0.7em] md:tracking-tighter">WEB</span>{' '}
               <span className="inline-block">DEVELOPER</span>
             </h1>
 
