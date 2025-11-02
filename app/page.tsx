@@ -341,52 +341,76 @@ const variants = {
         {/* Mobile Menu Overlay */}
         <div className={`md:hidden fixed inset-0 z-40 transition-all duration-300 ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
              style={{
-               background: 'linear-gradient(to bottom right, #0f1729 0%, #1a2e3a 30%, #1a3e2f 60%, #0a1e1a 100%)'
+               background: 'linear-gradient(135deg, #0a1e1a 0%, #0f2e2a 25%, #1a3e35 50%, #0f2e2a 75%, #0a1e1a 100%)'
              }}>
-          <nav className="flex flex-col items-center justify-center h-full gap-8">
+          {/* Green glow effects in menu */}
+          <div className="absolute top-[20%] left-[10%] w-[300px] h-[400px] bg-emerald-500 blur-[120px] rounded-full pointer-events-none opacity-20"></div>
+          <div className="absolute bottom-[20%] right-[10%] w-[300px] h-[400px] bg-green-400 blur-[100px] rounded-full pointer-events-none opacity-20"></div>
+
+          <nav className="relative flex flex-col items-center justify-center h-full gap-10">
             <a
               href="#about"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-white text-2xl font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+              className="text-3xl font-black tracking-[0.5em] uppercase transition-all duration-300 hover:scale-125 relative group"
               style={{
                 fontFamily: "'Impact', 'Arial Black', sans-serif",
-                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
+                background: 'linear-gradient(to bottom, #ffffff 30%, #a0f0d0 70%, #60d0a0 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                textShadow: '0 0 40px rgba(160, 255, 200, 0.6)',
+                filter: 'drop-shadow(0 0 20px rgba(160, 255, 200, 0.5)) drop-shadow(0 0 10px rgba(160, 255, 200, 0.3))'
               }}>
               ABOUT
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-400 to-green-400 transition-all duration-300 group-hover:w-full shadow-lg shadow-emerald-400/50"></span>
             </a>
             <a
               href="#services"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-white text-2xl font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+              className="text-3xl font-black tracking-[0.5em] uppercase transition-all duration-300 hover:scale-125 relative group"
               style={{
                 fontFamily: "'Impact', 'Arial Black', sans-serif",
-                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
+                background: 'linear-gradient(to bottom, #ffffff 30%, #a0f0d0 70%, #60d0a0 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                textShadow: '0 0 40px rgba(160, 255, 200, 0.6)',
+                filter: 'drop-shadow(0 0 20px rgba(160, 255, 200, 0.5)) drop-shadow(0 0 10px rgba(160, 255, 200, 0.3))'
               }}>
               SERVICES
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-400 to-green-400 transition-all duration-300 group-hover:w-full shadow-lg shadow-emerald-400/50"></span>
             </a>
             <a
               href="#portfolio"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-white text-2xl font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+              className="text-3xl font-black tracking-[0.5em] uppercase transition-all duration-300 hover:scale-125 relative group"
               style={{
                 fontFamily: "'Impact', 'Arial Black', sans-serif",
-                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
+                background: 'linear-gradient(to bottom, #ffffff 30%, #a0f0d0 70%, #60d0a0 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                textShadow: '0 0 40px rgba(160, 255, 200, 0.6)',
+                filter: 'drop-shadow(0 0 20px rgba(160, 255, 200, 0.5)) drop-shadow(0 0 10px rgba(160, 255, 200, 0.3))'
               }}>
               PORTFOLIO
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-400 to-green-400 transition-all duration-300 group-hover:w-full shadow-lg shadow-emerald-400/50"></span>
             </a>
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-white text-2xl font-black tracking-[0.3em] uppercase hover:text-emerald-400 transition-all duration-300 hover:scale-110 relative group"
+              className="text-3xl font-black tracking-[0.5em] uppercase transition-all duration-300 hover:scale-125 relative group"
               style={{
                 fontFamily: "'Impact', 'Arial Black', sans-serif",
-                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(160, 255, 200, 0.3)'
+                background: 'linear-gradient(to bottom, #ffffff 30%, #a0f0d0 70%, #60d0a0 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                textShadow: '0 0 40px rgba(160, 255, 200, 0.6)',
+                filter: 'drop-shadow(0 0 20px rgba(160, 255, 200, 0.5)) drop-shadow(0 0 10px rgba(160, 255, 200, 0.3))'
               }}>
               CONTACT
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-400 to-green-400 transition-all duration-300 group-hover:w-full shadow-lg shadow-emerald-400/50"></span>
             </a>
           </nav>
         </div>
