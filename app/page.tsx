@@ -350,14 +350,7 @@ const variants = {
           <div className="relative h-full flex flex-col px-6 py-8">
             {/* Menu Header */}
             <div className="flex justify-between items-center mb-12">
-              <h2 className="text-4xl font-black text-white">Menu</h2>
-              <button
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-12 h-12 flex items-center justify-center text-white text-3xl"
-                aria-label="Close menu"
-              >
-                ×
-              </button>
+              <h2 className="text-4xl font-black text-white">MENU</h2>
             </div>
 
             {/* Menu Items */}
@@ -414,18 +407,6 @@ const variants = {
                 <span className="text-emerald-400 text-2xl">→</span>
               </a>
             </nav>
-
-            {/* Hire Me Button */}
-            <a
-              href="#hire"
-              onClick={() => setMobileMenuOpen(false)}
-              className="mt-auto px-8 py-5 rounded-full text-white text-xl font-bold text-center transition-all duration-300 hover:scale-105"
-              style={{
-                background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-                boxShadow: '0 10px 40px rgba(16, 185, 129, 0.4)'
-              }}>
-              Hire Me 🤝
-            </a>
           </div>
         </div>
 
