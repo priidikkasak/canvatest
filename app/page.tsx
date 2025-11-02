@@ -347,72 +347,86 @@ const variants = {
           <div className="absolute top-[20%] left-[10%] w-[300px] h-[400px] bg-emerald-500 blur-[120px] rounded-full pointer-events-none opacity-20"></div>
           <div className="absolute bottom-[20%] right-[10%] w-[300px] h-[400px] bg-green-400 blur-[100px] rounded-full pointer-events-none opacity-20"></div>
 
-          <nav className="relative flex flex-col items-center justify-center h-full gap-10">
+          <div className="relative h-full flex flex-col px-6 py-8">
+            {/* Menu Header */}
+            <div className="flex justify-between items-center mb-12">
+              <h2 className="text-4xl font-black text-white">Menu</h2>
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-12 h-12 flex items-center justify-center text-white text-3xl"
+                aria-label="Close menu"
+              >
+                ×
+              </button>
+            </div>
+
+            {/* Menu Items */}
+            <nav className="flex-1 flex flex-col gap-4">
+              <a
+                href="#about"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center justify-between px-6 py-5 rounded-3xl transition-all duration-300 hover:scale-[1.02]"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.08)',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(160, 240, 208, 0.2)'
+                }}>
+                <span className="text-2xl font-bold text-white">About</span>
+                <span className="text-emerald-400 text-2xl">→</span>
+              </a>
+
+              <a
+                href="#services"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center justify-between px-6 py-5 rounded-3xl transition-all duration-300 hover:scale-[1.02]"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.08)',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(160, 240, 208, 0.2)'
+                }}>
+                <span className="text-2xl font-bold text-white">Services</span>
+                <span className="text-emerald-400 text-2xl">→</span>
+              </a>
+
+              <a
+                href="#portfolio"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center justify-between px-6 py-5 rounded-3xl transition-all duration-300 hover:scale-[1.02]"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.08)',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(160, 240, 208, 0.2)'
+                }}>
+                <span className="text-2xl font-bold text-white">Portfolio</span>
+                <span className="text-emerald-400 text-2xl">→</span>
+              </a>
+
+              <a
+                href="#contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center justify-between px-6 py-5 rounded-3xl transition-all duration-300 hover:scale-[1.02]"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.08)',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(160, 240, 208, 0.2)'
+                }}>
+                <span className="text-2xl font-bold text-white">Contact</span>
+                <span className="text-emerald-400 text-2xl">→</span>
+              </a>
+            </nav>
+
+            {/* Hire Me Button */}
             <a
-              href="#about"
+              href="#hire"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-3xl font-black tracking-[0.5em] uppercase transition-all duration-300 hover:scale-125 relative group"
+              className="mt-auto px-8 py-5 rounded-full text-white text-xl font-bold text-center transition-all duration-300 hover:scale-105"
               style={{
-                fontFamily: "'Impact', 'Arial Black', sans-serif",
-                background: 'linear-gradient(to bottom, #ffffff 30%, #a0f0d0 70%, #60d0a0 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                textShadow: '0 0 40px rgba(160, 255, 200, 0.6)',
-                filter: 'drop-shadow(0 0 20px rgba(160, 255, 200, 0.5)) drop-shadow(0 0 10px rgba(160, 255, 200, 0.3))'
+                background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                boxShadow: '0 10px 40px rgba(16, 185, 129, 0.4)'
               }}>
-              ABOUT
-              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-400 to-green-400 transition-all duration-300 group-hover:w-full shadow-lg shadow-emerald-400/50"></span>
+              Hire Me 🤝
             </a>
-            <a
-              href="#services"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-3xl font-black tracking-[0.5em] uppercase transition-all duration-300 hover:scale-125 relative group"
-              style={{
-                fontFamily: "'Impact', 'Arial Black', sans-serif",
-                background: 'linear-gradient(to bottom, #ffffff 30%, #a0f0d0 70%, #60d0a0 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                textShadow: '0 0 40px rgba(160, 255, 200, 0.6)',
-                filter: 'drop-shadow(0 0 20px rgba(160, 255, 200, 0.5)) drop-shadow(0 0 10px rgba(160, 255, 200, 0.3))'
-              }}>
-              SERVICES
-              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-400 to-green-400 transition-all duration-300 group-hover:w-full shadow-lg shadow-emerald-400/50"></span>
-            </a>
-            <a
-              href="#portfolio"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-3xl font-black tracking-[0.5em] uppercase transition-all duration-300 hover:scale-125 relative group"
-              style={{
-                fontFamily: "'Impact', 'Arial Black', sans-serif",
-                background: 'linear-gradient(to bottom, #ffffff 30%, #a0f0d0 70%, #60d0a0 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                textShadow: '0 0 40px rgba(160, 255, 200, 0.6)',
-                filter: 'drop-shadow(0 0 20px rgba(160, 255, 200, 0.5)) drop-shadow(0 0 10px rgba(160, 255, 200, 0.3))'
-              }}>
-              PORTFOLIO
-              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-400 to-green-400 transition-all duration-300 group-hover:w-full shadow-lg shadow-emerald-400/50"></span>
-            </a>
-            <a
-              href="#contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-3xl font-black tracking-[0.5em] uppercase transition-all duration-300 hover:scale-125 relative group"
-              style={{
-                fontFamily: "'Impact', 'Arial Black', sans-serif",
-                background: 'linear-gradient(to bottom, #ffffff 30%, #a0f0d0 70%, #60d0a0 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                textShadow: '0 0 40px rgba(160, 255, 200, 0.6)',
-                filter: 'drop-shadow(0 0 20px rgba(160, 255, 200, 0.5)) drop-shadow(0 0 10px rgba(160, 255, 200, 0.3))'
-              }}>
-              CONTACT
-              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-400 to-green-400 transition-all duration-300 group-hover:w-full shadow-lg shadow-emerald-400/50"></span>
-            </a>
-          </nav>
+          </div>
         </div>
 
         {/* Desktop Navigation Menu */}
