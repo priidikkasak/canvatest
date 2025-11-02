@@ -341,7 +341,7 @@ const variants = {
         {/* Mobile Menu Overlay */}
         <div className={`md:hidden fixed inset-0 z-40 transition-all duration-300 ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
              style={{
-               background: 'linear-gradient(to bottom right, #0f1729 0%, #1a1e47 50%, #0a0e27 100%)'
+               background: 'linear-gradient(to bottom right, #0f1729 0%, #1a2e3a 30%, #1a3e2f 60%, #0a1e1a 100%)'
              }}>
           <nav className="flex flex-col items-center justify-center h-full gap-8">
             <a
