@@ -341,7 +341,7 @@ const variants = {
         {/* Mobile Menu Overlay */}
         <div className={`md:hidden fixed inset-0 z-40 transition-all duration-300 ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
              style={{
-               background: 'linear-gradient(135deg, #0a1e1a 0%, #0f2e2a 25%, #1a3e35 50%, #0f2e2a 75%, #0a1e1a 100%)'
+               background: '#182e42'
              }}>
           {/* Green glow effects in menu */}
           <div className="absolute top-[20%] left-[10%] w-[300px] h-[400px] bg-emerald-500 blur-[120px] rounded-full pointer-events-none opacity-20"></div>
